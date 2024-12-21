@@ -28,10 +28,13 @@ while True:
     print(" ")
     for face in faces:
         x,y,w,h = face
-        cv2.rectangle(frame,(x,y),(x+w,y+h),(255,255,0),3)
+        cx = x + w // 2
+        cy = y + h // 2
+        cv2.rectangle(frame,(x,y),((x+w),(y+h)),(255,0,0),3)
+        cv2.circle(frame, (cx, cy), radius=5, color=(0, 255, 0), thickness=-1)
     for eye in eyes:
         x,y,w,h = eye
-        cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),1)
+        cv2.rectangle(frame,(x,y),((x+w),(y+h)),(0,0,255),1)
     for smile in smiles:
         x,y,w,h = smile
         cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),1)

@@ -21,7 +21,7 @@ while True:
     ignore,  frame = cam.read()
     frame = cv2.resize(frame,(width,height))
     frameRGB = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
-    results = hands.process(frameRGB)  # very hard data structure
+    results = hands.process(frameRGB)  # result is a very complex data structure
     print(results)
     if results.multi_hand_landmarks != None:
         print("hand found")
