@@ -1,15 +1,4 @@
 
-
-
-# knownEncodings = [donFaceEncode,nancyFaceEncode]
-
-# names = ['Donald TRUMP','Nancy Pelosi']
-
-
-
-# with open('/home/sumukhchakkirala/Documents/opencv-ai/train.pk1','rb') as p:
-#     names = pickle.load(f)
-#     encodings = pickle.load(p) # the order of names, encodings depends on how we dumped the data in train.pk1
 import cv2
 import face_recognition as FR
 import pickle
