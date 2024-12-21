@@ -22,12 +22,12 @@ while True:
     frame = cv2.resize(frame,(width,height))
     frameRGB = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
     results = hands.process(frameRGB)  # result is a very complex data structure
-    print(results)
+    #print(results)
     if results.multi_hand_landmarks != None:
         print("hand found")
         for handLandMarks in results.multi_hand_landmarks:
             myHand = []
-            print(handLandMarks) #has x,y,z coordinates for all 21 points on the hand
+            #print(handLandMarks) #has x,y,z coordinates for all 21 points on the hand
             mpDraw.draw_landmarks(frame,handLandMarks,mp.solutions.hands.HAND_CONNECTIONS)
             for Landmarks in handLandMarks.landmark:
                 print((Landmarks.x,Landmarks.y))
@@ -35,7 +35,9 @@ while True:
             print('')
             cv2.circle(frame,myHand[10],25,(255,0,0),-1)
             # cv2.circle(frame,(300.0,300.0),25,(255,0,0),-1) wrong because location must be an integer 
-            myHands.append(myHand)
+            #myHands.append(myHand)
+            print(myHand)
+            print(' ')
             print(myHands)
             print(' ')
 
