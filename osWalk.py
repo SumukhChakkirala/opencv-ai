@@ -14,7 +14,7 @@ for root,dirs,files in os.walk(imageDir):  #present directory, directories in th
         #fullfilepath = root+'/'+file
         fullfilepath = os.path.join(root,file)
         #print('your guy is ',fullfilepath)
-        name = os.path.splitext(file)[0]  #Split the extension from a pathname.
+        name = os.path.splitext(file)[0]  #Split the extension from a pathname. Returns: ('example', '.txt')
         print(name)
         myPicture = FR.load_image_file(fullfilepath)
         myPicture = cv2.cvtColor(myPicture,cv2.COLOR_RGB2BGR)
